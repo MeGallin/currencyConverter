@@ -15,7 +15,7 @@ let calculate = e => {
   fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      //   console.log(data);
       const rate = data.rates[currency_two];
       const lastUpdate = new Date(data.time_last_updated * 1000);
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
@@ -31,8 +31,9 @@ currencyEl_two.addEventListener('change', calculate);
 amountEl_two.addEventListener('input', calculate);
 
 swap.addEventListener('click', () => {
+  //   console.log(currencyEl_one.value, currencyEl_two.value);
   const temp = currencyEl_one.value;
-  currencyEl_one.value = currencyEl_two.valve;
+  currencyEl_one.value = currencyEl_two.value;
   currencyEl_two.value = temp;
   calculate();
 });
