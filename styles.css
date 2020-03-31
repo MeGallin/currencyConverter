@@ -21,6 +21,7 @@ h1 {
 p {
   text-align: center;
 }
+
 .btn {
   color: white;
   background-color: var(--primary-colour);
@@ -30,12 +31,15 @@ p {
   padding: 5px 12px;
 }
 .money-img {
-  width: 300px;
-  height: 250px;
-  background-color: var(--primary-colour);
+  width: 150px;
+  height: 125px;
+  /* background-color: var(--primary-colour); */
 }
 .currency {
-  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(200, 200, 200, 1);
+  padding: 40px 0.6em;
+  margin: 0.6em 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
